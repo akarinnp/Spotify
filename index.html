@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Spotify Imersão ALURA</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+   
+   <link rel="stylesheet" href="./src/styles/vars.css">
+   
+   <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="./src/styles/main-content.css">
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" >
+    
+    
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="./src/styles/main-content.css">
+    <link rel="stylesheet" href="./src/styles/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+        
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="sidebar__navigation">
+            <div class="logo">
+                <a href="">
+                    <img src="./src/assets/icons/logo-spotify.png" alt="Logo" />
+                </a>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="fa fa-home"></span>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="fa fa-search"></span>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="library">
+            <div class="library__content">
+                <button class="library__button">
+                    <span class="fa fas fa-book"></span>
+                    <span>Sua biblioteca</span>
+                </button>
+                <span class="fa fa-plus"></span>
+            </div>
+
+            <section class="section-playlist">
+                <div class="section-playlist__content">
+                    <span class="text title">Crie sua primeira playlist</span>
+                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                    <button class="section-playlist__button">
+                        <span>Criar playlist</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="section-podcast"> 
+                <div class="section-podcast-content">
+                    <span class="section-podcast-content-tittle">Que tal seguir um podcast novo?</span>
+                    <span class="section-podcast-content-subtittle">Avisaremos você sobre novos episódios</span>
+                </div>
+                <button class="section-podcast-button">
+                    <span class="podcast-button-text">Explore podcasts</span>
+                </button>
+            </section>
+
+            <div class="BOLACHA">
+                <!-- <a href="" style="margin-right:    10.9px;">Legal</a>
+                <a href="" style="margin-right:    10.9px;">Segurança e Centro de privacidade</a>
+                <a href="" style="margin-right:    10.9px;">Políticas de privacidade</a>
+                <a href="" style="margin-right:    10.9px;">Cookies</a>
+                <a href="" style="margin-right:    2px;">Sobre anúncios</a>
+                <a href="">Acessibilidade</a>
+                <div class="cookies"> -->
+                <a href="">Cookies</a>
+            </div>
+            </div>
+            
+            
+            
+
+            <div class="languages">
+                <button class="languages__button">
+                    <span class="fa fa-globe"></span>
+                    <span>Português do Brasil</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="main-container">
+            <nav class="header__navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="./src/assets/icons/small-left.png" alt="" />
+                    </button>
+                    <button class="arrow-right">
+                        <img src="./src/assets/icons/small-right.png" alt="" />
+                    </button>
+                </div>
+
+                <div class="header__search">
+                    <img src="./src/assets/icons/search.png" alt="" />
+                    <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+                        placeholder="O que você quer ouvir?" value="" />
+                </div>
+
+                <div class="header__login">
+                    <button class="subscribe">Inscreva-se</button>
+                    <button class="login">Entrar</button>
+                </div>
+            </nav>
+
+            <!-- PLAYLIST -->
+            <div class="playlist-container">
+                <div id="result-playlists">
+                    <div class="playlist">
+                        <h1 id="greeting">Boas vindas</h1>
+                        <h2 class="session">Navegar por todas as seções</h2>
+                    </div>
+
+                    <!-- LIST DE CARDS -->
+                    <div class="offer__scroll-container">
+                        <div class="offer__list">
+                            <section class="offer__list-item">
+                                <!-- CARD 1 -->
+                                <a href="" class="cards">
+                                    <div class="cards card1">
+                                        <img src="./src/assets/playlist/1.jpeg" alt="" />
+                                        <span>Boas festas</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 2 -->
+                                <a href="" class="cards">
+                                    <div class="cards card2">
+                                        <img src="./src/assets/playlist/2.png" alt="" />
+                                        <span>Feitos para você</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 3 -->
+                                <a href="" class="cards">
+                                    <div class="cards card3">
+                                        <img src="./src/assets/playlist/3.jpeg" alt="" />
+                                        <span>Lançamentos</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 4 -->
+                                <a href="" class="cards">
+                                    <div class="cards card4">
+                                        <img src="./src/assets/playlist/4.jpeg" alt="" />
+                                        <span>Creators</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 5 -->
+                                <a href="" class="cards">
+                                    <div class="cards card5">
+                                        <img src="./src/assets/playlist/5.jpeg" alt="" />
+                                        <span>Para treinar</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 6 -->
+                                <a href="" class="cards">
+                                    <div class="cards card6">
+                                        <img src="./src/assets/playlist/6.jpeg" alt="" />
+                                        <span>Podcasts</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 7 -->
+                                <a href="" class="cards">
+                                    <div class="cards card7">
+                                        <img src="./src/assets/playlist/7.jpeg" alt="" />
+                                        <span>Sertanejo</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 8 -->
+                                <a href="" class="cards">
+                                    <div class="cards card8">
+                                        <img src="./src/assets/playlist/8.jpeg" alt="" />
+                                        <span>Samba e pagode</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 9 -->
+                                <a href="" class="cards">
+                                    <div class="cards card9">
+                                        <img src="./src/assets/playlist/9.jpeg" alt="" />
+                                        <span>Funk</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 10 -->
+                                <a href="" class="cards">
+                                    <div class="cards card10">
+                                        <img src="./src/assets/playlist/10.jpeg" alt="" />
+                                        <span>MPB</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 11 -->
+                                <a href="" class="cards">
+                                    <div class="cards card11">
+                                        <img src="./src/assets/playlist/11.jpeg" alt="" />
+                                        <span>Rock</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 12 -->
+                                <a href="" class="cards">
+                                    <div class="cards card12">
+                                        <img src="./src/assets/playlist/12.jpeg" alt="" />
+                                        <span>Hip Hop</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 13 -->
+                                <a href="" class="cards">
+                                    <div class="cards card13">
+                                        <img src="./src/assets/playlist/13.jpeg" alt="" />
+                                        <span>Indie</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 14 -->
+                                <a href="" class="cards">
+                                    <div class="cards card14">
+                                        <img src="./src/assets/playlist/14.jpeg" alt="" />
+                                        <span>Relax</span>
+                                    </div>
+                                </a>
+
+                                <!-- CARD 15 -->
+                                <a href="" class="cards">
+                                    <div class="cards card15">
+                                        <img src="./src/assets/playlist/15.jpeg" alt="" />
+                                        <span>Música Latina</span>
+                                    </div>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="result-artist" class="hidden">
+                    <div class="grid-container">
+                        <div class="artist-card" id="">
+                            <div class="card-img">
+                                <img id="artist-img" class="artist-img" />
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <a title="Foo Fighters" class="vst" href=""></a>
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-categorie">Artista</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- <script>
+        function playAudio() {
+            let x = document.getElementById("myAudio");
+            x.play();
+        }
+        function pauseAudio() {
+            let x = document.getElementById("myAudio");
+            x.pause();
+        }       
+    </script> -->
+    <div class="footer-player">
+        <div class="footer-player-left">
+            <div class="footer-player-left-song">
+                <!-- Song Name and Artist -->
+                <div class="footer-player-left-song-name">Never Gonna Give You Up</div>
+                <div class="footer-player-left-song-artist">Rick Astley</div>
+            </div>
+            <div class="footer-player-left-like">
+                <!-- Like Button -->
+                <img src="assets/FiiledLike.svg" alt="" class="spotify-color" style="height: 18px; width: 18px;">
+            </div>
+        </div>
+        <div class="footer-player-middle">
+            <!-- Middle Player Controls -->
+
+
+            <div class="footer-player-middle-buttons">
+                <button onclick="toggleShuffle()">
+                    <img src="assets/Shuffle.svg" alt="Shuffle" class="gray-filtered">
+                  </button>
+                <button onclick="playPreviousTrack()">
+                    <img src="assets/Previous.svg" alt="Previous" class="gray-filtered">
+                </button>
+                <span class="pause-button">
+                    <button class="play-btn" onclick="playPauseAudio()">
+                        <img src="/images/play-button-arrowhead.png" alt="Play">
+                    </button>
+                </span>
+                <button onclick="playNextTrack()">
+                    <img src="assets/Next.svg" alt="Next" class="gray-filtered">
+                </button>
+                <button onclick="toggleRepeat()">
+                    <img src="assets/Repeat.svg" alt="Repeat" class="gray-filtered">
+                </button>
+            </div>
+            
+
+            
+            <div class="footer-player-middle-slider">
+                <!-- Time Slider -->
+                <div class="player-time">0:00</div>
+                <div class="player-slider">
+                    <input type="range" min="0" max="100" value="0" onchange="seekAudio()">
+                </div>
+                <div class="player-time">0:00</div>
+            </div>
+        </div>
+        <div class="footer-player-right">
+            <!-- Right Player Controls -->
+            <div class="footer-player-right-buttons">
+                <!-- Additional Controls -->
+                <img src="assets/Lyrics.svg" alt="">
+                <img src="assets/Queue.svg" class="filtered-img" alt="">
+                <img src="assets/Connect to a device.svg" class="filtered-img" alt="">
+                <div class="volume-controls">
+                    <img src="assets/Volume.svg" class="filtered-img" alt="">
+                    <div class="player-slider" style="margin-right: 20px; width: 200px;">
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" oninput="changeVolume()">
+                        <span id="volume-value">100</span>
+                    </div>
+                    <audio id="myAudio">
+                        <!-- Audio Source -->
+                        <source src="/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <img src="assets/Full screen.svg" class="filtered-img" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const audio = document.getElementById("myAudio");
+        let isPlaying = false;
+    
+        function playPauseAudio() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying =!isPlaying;
+        }
+    
+        function changeVolume() {
+            const volume = document.getElementById("volume").value;
+            audio.volume = volume;
+            document.getElementById("volume-value").textContent = Math.round(volume * 100);
+        }
+    
+        function seekAudio() {
+            const seekTime = audio.duration * (document.querySelector(".player-slider input").value / 100);
+            audio.currentTime = seekTime;
+        }
+    
+        // Atualiza o tempo atual durante a reprodução do áudio
+        audio.addEventListener("timeupdate", function() {
+            const currentTime = formatTime(audio.currentTime);
+            const duration = formatTime(audio.duration);
+            document.querySelector(".player-time:nth-of-type(1)").textContent = currentTime;
+            document.querySelector(".player-time:nth-of-type(2)").textContent = duration;
+            document.querySelector(".player-slider input").value = (audio.currentTime / audio.duration) * 100;
+        });
+    
+        // Função auxiliar para formatar o tempo em mm:ss
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let secs = Math.floor(seconds % 60);
+            if (secs < 10) {
+                secs = `0${secs}`;
+            }
+            return `${minutes}:${secs}`;
+        }
+    </script>
+    
+
+
+</body>
+
+    <!-- Player de áudio
+  <div id="player">
+    <audio id="audioPlayer" controls>
+      <source src="./audio/Bruno Mars - Finesse (remix) Feat Cardi B.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+   
+  </div>
+
+  <script src="script.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+</body> -->
+    
+
+</html>
